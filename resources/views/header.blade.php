@@ -1,3 +1,8 @@
+<?php 
+use App\Http\Controllers\ProductController;
+$total= ProductController::cartItem();
+
+?>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,7 +29,7 @@
           <button type="submit" class="btn btn-default">Search</button>
         </form>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">cart(0)</a></li>
+          <li><a href="#">cart({{$total}})</a></li>
           
         </ul>
       </div><!-- /.navbar-collapse -->
